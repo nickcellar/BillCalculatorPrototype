@@ -71,8 +71,8 @@
 
 - (IBAction)tipRateValueChanged:(UISlider *)sender
 {
-    float tipRate = sender.value * 5 / 100;
     int tipRatePercent = (int) sender.value * 5;
+    float tipRate = (float) tipRatePercent / 100;
     [_uTipRate setText:[NSString stringWithFormat:@"(%d%%)", tipRatePercent]];
     [_bill setTipRate:tipRate];
     [self updateResult];
