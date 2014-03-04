@@ -20,7 +20,8 @@
 		E1A6186F18C5516000BC204C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6184E18C5515F00BC204C /* Foundation.framework */; };
 		E1A6187018C5516000BC204C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6185218C5515F00BC204C /* UIKit.framework */; };
 		E1A6187818C5516000BC204C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1A6187618C5516000BC204C /* InfoPlist.strings */; };
-		E1A6187A18C5516000BC204C /* BillCalculatorPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6187918C5516000BC204C /* BillCalculatorPrototypeTests.m */; };
+		E1A6188518C551C600BC204C /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6188418C551C600BC204C /* Bill.m */; };
+		E1A6188718C551E300BC204C /* BillTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6188618C551E300BC204C /* BillTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,9 @@
 		E1A6186D18C5515F00BC204C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E1A6187518C5516000BC204C /* BillCalculatorPrototypeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BillCalculatorPrototypeTests-Info.plist"; sourceTree = "<group>"; };
 		E1A6187718C5516000BC204C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E1A6187918C5516000BC204C /* BillCalculatorPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillCalculatorPrototypeTests.m; sourceTree = "<group>"; };
+		E1A6188318C551C600BC204C /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
+		E1A6188418C551C600BC204C /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
+		E1A6188618C551E300BC204C /* BillTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,11 @@
 		E1A6185418C5515F00BC204C /* BillCalculatorPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				E1A6188918C5520A00BC204C /* Controllers */,
+				E1A6188818C551FB00BC204C /* Utilities */,
 				E1A6185D18C5515F00BC204C /* AppDelegate.h */,
 				E1A6185E18C5515F00BC204C /* AppDelegate.m */,
 				E1A6186018C5515F00BC204C /* Main.storyboard */,
-				E1A6186318C5515F00BC204C /* ViewController.h */,
-				E1A6186418C5515F00BC204C /* ViewController.m */,
 				E1A6186618C5515F00BC204C /* Images.xcassets */,
 				E1A6185518C5515F00BC204C /* Supporting Files */,
 			);
@@ -137,7 +140,7 @@
 		E1A6187318C5516000BC204C /* BillCalculatorPrototypeTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1A6187918C5516000BC204C /* BillCalculatorPrototypeTests.m */,
+				E1A6188618C551E300BC204C /* BillTest.m */,
 				E1A6187418C5516000BC204C /* Supporting Files */,
 			);
 			path = BillCalculatorPrototypeTests;
@@ -150,6 +153,24 @@
 				E1A6187618C5516000BC204C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1A6188818C551FB00BC204C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E1A6188318C551C600BC204C /* Bill.h */,
+				E1A6188418C551C600BC204C /* Bill.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E1A6188918C5520A00BC204C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1A6186318C5515F00BC204C /* ViewController.h */,
+				E1A6186418C5515F00BC204C /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A6188518C551C600BC204C /* Bill.m in Sources */,
 				E1A6186518C5515F00BC204C /* ViewController.m in Sources */,
 				E1A6185F18C5515F00BC204C /* AppDelegate.m in Sources */,
 				E1A6185B18C5515F00BC204C /* main.m in Sources */,
@@ -259,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A6187A18C5516000BC204C /* BillCalculatorPrototypeTests.m in Sources */,
+				E1A6188718C551E300BC204C /* BillTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
