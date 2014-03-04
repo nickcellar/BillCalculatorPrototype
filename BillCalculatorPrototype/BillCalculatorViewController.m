@@ -32,9 +32,9 @@
     // set init data
     _splitCount = 1;
     _bill = [[Bill alloc] init];
-    [_uCheckAmount setText:[NSString stringWithFormat:@"$%g", _bill.checkAmount]];
+    [_uCheckAmount setText:[NSString stringWithFormat:@"%g", _bill.checkAmount]];
+    [_uTaxRate setText:[NSString stringWithFormat:@"%g", _bill.taxRate * 100]];
     [_uTipRate setText:[NSString stringWithFormat:@"(%g%%)", _bill.tipRate * 100]];
-    [_uTaxRate setText:[NSString stringWithFormat:@"(%g%%)", _bill.taxRate * 100]];
     [_uTaxIncluded setOn:_bill.isTaxIncluded];
     [self updateResult];
 
