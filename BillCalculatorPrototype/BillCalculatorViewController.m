@@ -20,6 +20,7 @@
 @property(weak, nonatomic) IBOutlet UILabel *uSplitCount;
 @property(weak, nonatomic) IBOutlet UILabel *uTotalChargePerPerson;
 @property(weak, nonatomic) IBOutlet UILabel *uTotalTipPerPerson;
+@property(weak, nonatomic) IBOutlet UITextField *uTaxRate;
 @end
 
 @implementation BillCalculatorViewController
@@ -33,6 +34,7 @@
     _bill = [[Bill alloc] init];
     [_uCheckAmount setText:[NSString stringWithFormat:@"$%g", _bill.checkAmount]];
     [_uTipRate setText:[NSString stringWithFormat:@"(%g%%)", _bill.tipRate * 100]];
+    [_uTaxRate setText:[NSString stringWithFormat:@"(%g%%)", _bill.taxRate * 100]];
     [_uTaxIncluded setOn:_bill.isTaxIncluded];
     [self updateResult];
 
@@ -52,6 +54,12 @@
 - (IBAction)checkAmountEditingDidEnd:(UITextField *)sender
 {
     [_bill setCheckAmount:[sender.text floatValue]];
+    [self updateResult];
+}
+
+- (IBAction)taxRateEditingDidEnd:(UITextField *)sender
+{
+    [_bill setTaxRate:[sender.text floatValue] / 100];
     [self updateResult];
 }
 
@@ -80,6 +88,7 @@
 - (void)dismissKeyboard
 {
     [_uCheckAmount resignFirstResponder];
+    [_uTaxRate resignFirstResponder];
 }
 
 @end
