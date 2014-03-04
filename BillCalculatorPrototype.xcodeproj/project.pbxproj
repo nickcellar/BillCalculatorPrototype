@@ -14,7 +14,6 @@
 		E1A6185B18C5515F00BC204C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6185A18C5515F00BC204C /* main.m */; };
 		E1A6185F18C5515F00BC204C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6185E18C5515F00BC204C /* AppDelegate.m */; };
 		E1A6186218C5515F00BC204C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6186018C5515F00BC204C /* Main.storyboard */; };
-		E1A6186518C5515F00BC204C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6186418C5515F00BC204C /* ViewController.m */; };
 		E1A6186718C5515F00BC204C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A6186618C5515F00BC204C /* Images.xcassets */; };
 		E1A6186E18C5515F00BC204C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6186D18C5515F00BC204C /* XCTest.framework */; };
 		E1A6186F18C5516000BC204C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6184E18C5515F00BC204C /* Foundation.framework */; };
@@ -22,6 +21,7 @@
 		E1A6187818C5516000BC204C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1A6187618C5516000BC204C /* InfoPlist.strings */; };
 		E1A6188518C551C600BC204C /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6188418C551C600BC204C /* Bill.m */; };
 		E1A6188718C551E300BC204C /* BillTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6188618C551E300BC204C /* BillTest.m */; };
+		E1A6188C18C5531B00BC204C /* BillCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A6188B18C5531B00BC204C /* BillCalculatorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,6 @@
 		E1A6185D18C5515F00BC204C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1A6185E18C5515F00BC204C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E1A6186118C5515F00BC204C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E1A6186318C5515F00BC204C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E1A6186418C5515F00BC204C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E1A6186618C5515F00BC204C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1A6186C18C5515F00BC204C /* BillCalculatorPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillCalculatorPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6186D18C5515F00BC204C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,6 +54,8 @@
 		E1A6188318C551C600BC204C /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
 		E1A6188418C551C600BC204C /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
 		E1A6188618C551E300BC204C /* BillTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillTest.m; sourceTree = "<group>"; };
+		E1A6188A18C5531B00BC204C /* BillCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillCalculatorViewController.h; sourceTree = "<group>"; };
+		E1A6188B18C5531B00BC204C /* BillCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillCalculatorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +167,8 @@
 		E1A6188918C5520A00BC204C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E1A6186318C5515F00BC204C /* ViewController.h */,
-				E1A6186418C5515F00BC204C /* ViewController.m */,
+				E1A6188A18C5531B00BC204C /* BillCalculatorViewController.h */,
+				E1A6188B18C5531B00BC204C /* BillCalculatorViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A6188C18C5531B00BC204C /* BillCalculatorViewController.m in Sources */,
 				E1A6188518C551C600BC204C /* Bill.m in Sources */,
-				E1A6186518C5515F00BC204C /* ViewController.m in Sources */,
 				E1A6185F18C5515F00BC204C /* AppDelegate.m in Sources */,
 				E1A6185B18C5515F00BC204C /* main.m in Sources */,
 			);
